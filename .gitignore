@@ -1,17 +1,3 @@
-# /uploads/app/*
-# /uploads/berita_image/*
-# /uploads/cover/*
-# /uploads/header_dir/*
-# /uploads/jurnal/*
-# /uploads/media_galery/*
-# /uploads/news/*
-# /uploads/photo/*
-# /uploads/skripsi/*
-# /uploads/skripsi_en/*
-# /uploads/luaran/*
-/application/config/database.php
-
-
 /uploads/sk/*
 /assets/img/news/*
 /uploads/bukti/*
