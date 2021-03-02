@@ -41,7 +41,7 @@ class MahasiswaAlumniController extends CI_Controller
 	public function getAllJurnal()
 	{
 		try {
-			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$this->SecurityModel->roleOnlyGuard('no_one');
 			$filter = $this->input->post();
 			if ($this->session->userdata()['nama_role'] == 'mahasiswa') {
 				$filter['id_mahasiswaalumni'] = $this->encryption->decrypt($this->session->userdata()['id_user']);
@@ -69,6 +69,8 @@ class MahasiswaAlumniController extends CI_Controller
 	{
 		try {
 			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$this->SecurityModel->roleOnlyGuard('no_one');
+
 			$data = $this->MahasiswaAlumniModel->getMahasiswaSelfSkripsi();
 			echo json_encode(array("data" => $data));
 		} catch (Exception $e) {
@@ -79,7 +81,10 @@ class MahasiswaAlumniController extends CI_Controller
 	public function getMahasiswaSelfSkripsiAdmin()
 	{
 		try {
-			$this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+			$this->SecurityModel->roleOnlyGuard('no_one');
+
+			// $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+			
             $data = $this->input->post();
 			$data = $this->MahasiswaAlumniModel->getMahasiswaSelfSkripsiAdmin($data);
 			echo json_encode(array("data" => $data));
@@ -107,7 +112,9 @@ class MahasiswaAlumniController extends CI_Controller
 	public function addJurnal()
 	{
 		try {
-            $this->SecurityModel->userOnlyGuard(TRUE);
+			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$this->SecurityModel->roleOnlyGuard('no_one');
+			
 			$data = $this->input->post();
 			if ($this->session->userdata()['nama_role'] == 'mahasiswa') {
 				$data['id_mahasiswaalumni'] = $this->encryption->decrypt($this->session->userdata()['id_user']);
@@ -185,7 +192,8 @@ class MahasiswaAlumniController extends CI_Controller
 	public function editJurnal()
 	{
 		try {
-            $this->SecurityModel->userOnlyGuard(TRUE);
+			// $this->SecurityModel->userOnlyGuard(TRUE);
+			$this->SecurityModel->roleOnlyGuard('no_one');
 			$data = $this->input->post();
 			if ($this->session->userdata()['nama_role'] == 'mahasiswa') {
 				$data['id_mahasiswaalumni'] = $this->encryption->decrypt($this->session->userdata()['id_user']);
@@ -211,7 +219,9 @@ class MahasiswaAlumniController extends CI_Controller
 	public function editSelfSkripsi()
 	{
 		try {
-            // $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+			// $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+			$this->SecurityModel->roleOnlyGuard('no_one');
+			
 			$data = $this->input->post();
 			// var_dump($data);
 			if(!empty($data['skripsiFilename'])) {
@@ -241,7 +251,9 @@ class MahasiswaAlumniController extends CI_Controller
 	public function editSelfSkripsiAdmin()
 	{
 		try {
-            $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+			$this->SecurityModel->roleOnlyGuard('no_one');
+
+            // $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
 			$data = $this->input->post();
 			// var_dump($data);
 			if(!empty($data['skripsiFilename'])) {

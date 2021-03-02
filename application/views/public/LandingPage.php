@@ -214,7 +214,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12">
                     <div class="row ">
-                        <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Suliet UNSRI" style="display:block; margin-bottom:10px ; padding : 30px 50px  30px 50px" href="https://suliet.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-suliet.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-suliet.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-suliet.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-suliet.png') ?>" width="100%"></noscript></noscript></a></div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Universitas Sriwijaya English Proficiency Test" style="display:block; margin-bottom:10px ; padding : 30px 50px  30px 50px" href="https://suliet.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-usept.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-usept.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-usept.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-usept.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-usept.png') ?>" width="100%"></noscript></noscript></a></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Uiversitas Srijiyata" href="https://unsri.ac.id/" style="display:block; margin-bottom:10px ; padding : 30px 50px  30px 50px" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-unsri1.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-unsri1.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-unsri1.png') ?>" width="100%"></noscript></a></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Sistem Informasi Akademik Unsri" style="display:block; margin-bottom:10px ; padding : 30px 50px  30px 50px" href="https://akademik.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-akademik.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-akademik.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-akademik.png') ?>" width="100%"></noscript></noscript></a></div>
                     </div>
@@ -356,7 +356,7 @@
                 <br>
                 <div class="col-12 col-sm-12 col-md-12">
                     <div class="row ">
-                        <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Suliet UNSRI" style="display:block; margin-bottom:10px ; padding : 40px 20px  30px 20px" href="https://suliet.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-suliet.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-suliet.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-suliet.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-suliet.png') ?>" width="100%"></noscript></noscript></a></div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Suliet UNSRI" style="display:block; margin-bottom:10px ; padding : 40px 20px  30px 20px" href="https://suliet.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-usept.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-usept.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-usept.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-usept.png') ?>" width="100%"></noscript></noscript></a></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Uiversitas Srijiyata" href="https://unsri.ac.id/" style="display:block; margin-bottom:10px ; padding : 30px 50px  30px 50px" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-unsri1.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-unsri1.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-unsri1.png') ?>" width="100%"></noscript></a></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 "> <a title="Sistem Informasi Akademik Unsri" style="display:block; margin-bottom:10px ; padding :40px 20px  30px 20px" href="https://akademik.unsri.ac.id/" target="_blank"><img width="100%" data-src="<?= base_url('assets/img/banner-akademik.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img width="100%" data-src="<?= base_url('assets/img/banner-akademik.png') ?>" class="lazyload" src="<?= base_url('assets/img/banner-akademik.png') ?>"><noscript><img src="<?= base_url('assets/img/banner-akademik.png') ?>" width="100%"></noscript></noscript></a></div>
                     </div>
@@ -618,7 +618,7 @@
                         if (panjang == 'kosong') {
                             p = '';
                         } else {
-                            var index_p = panjang.lastIndexOf("</p>", 300);
+                            var index_p = panjang.lastIndexOf("</p>", 100);
                             if (index_p == (-1)) {
                                 index_p = 30
                             }
@@ -646,7 +646,7 @@
                         if (panjang == 'kosong') {
                             p = '';
                         } else {
-                            var index_p = panjang.lastIndexOf("</p>", 300);
+                            var index_p = panjang.lastIndexOf("</p>", 100);
                             if (index_p == (-1)) {
                                 index_p = 30
                             }

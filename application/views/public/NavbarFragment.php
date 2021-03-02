@@ -79,7 +79,7 @@ if (empty($_COOKIE['lang_set'])) {
                     <li id="lang_in" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-id menu-item menu-item-type-custom menu-item-object-custom menu-item-2223"><a title="Indonesia" aria-current="page"><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" alt="Indonesia" /></noscript></noscript></noscript></noscript>&nbsp;Indonesia</a></li>
                   </ul>
                 </li>
-                <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="<?= base_url('library') ?>">Direktori FKM</a></li>
+                <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://lib.ugik-dev.com">Direktori FKM</a></li>
                 <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="<?= base_url('login') ?>"><?php if (!empty($this->session->userdata()['username'])) {
                                                           echo $this->session->userdata()['nama'];
                                                         } else {
@@ -198,7 +198,7 @@ if (empty($_COOKIE['lang_set'])) {
                         </ul>
               </li>
 
-              <li id="menu-item-485" class="hidden-lg hidden-md menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-485 dropdown"><a title="Directory" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Bahasa <i class="animated fa fa-angle-right"></i></a>
+              <li id="menu-item-485" class="hidden-lg hidden-md menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-485 dropdown"><a title="Bahasa" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Bahasa <i class="animated fa fa-angle-right"></i></a>
                 <div class=" dropdown-menu">
                   <div class=" row block">
                     <div class=" col-lg-7 col-md-7 col-xs-12 pull-right sub-mobile">
@@ -212,7 +212,7 @@ if (empty($_COOKIE['lang_set'])) {
                                                         } else {
                                                           echo ' Login';
                                                         } ?></a>
-              <li id="menu-item-485" class="hidden-lg hidden-md menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-485"><a href="<?= base_url('library') ?>">Direktori FKM</a></li>
+              <li id="menu-item-485" class="hidden-lg hidden-md menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-485"><a href="http://lib.ugik-dev.com">Direktori FKM</a></li>
 
                 <!-- 
               </li>
@@ -276,7 +276,7 @@ if (empty($_COOKIE['lang_set'])) {
                     <li id="lang_in" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-id menu-item menu-item-type-custom menu-item-object-custom menu-item-2223"><a title="Indonesia" aria-current="page"><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img alt="Indonesia" data-src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://ub.ac.id/wp-content/plugins/qtranslate-x/flags/id.png" alt="Indonesia" /></noscript></noscript></noscript></noscript>&nbsp; Indonesia</a></li>
                   </ul>
                 </li>
-                <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="<?= base_url('library') ?>">Direktori FKM</a></li>
+                <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://lib.ugik-dev.com">Direktori FKM</a></li>
                 <li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="<?= base_url('login') ?>"><?php if(!empty($this->session->userdata()['username'])){ echo $this->session->userdata()['nama']; }else{ echo ' Login';} ?></a></li>
 
               </ul>

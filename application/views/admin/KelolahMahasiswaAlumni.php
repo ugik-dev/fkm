@@ -313,7 +313,6 @@
         <div class="btn-group" opd="group">
           <button id="action" type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='fa fa-bars'></i></button>
           <div class="dropdown-menu" aria-labelledby="action">
-          ${skripsiButton}
             ${editButton}
             ${deleteButton}
           </div>
