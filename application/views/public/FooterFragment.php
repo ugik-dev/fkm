@@ -1,12 +1,12 @@
 <div class="ub-footer home-row">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-4 col-xs-8">
+			<!-- <div class="col-lg-12 col-md-4 col-xs-8">
 
 				<div>
 					<strong>Copyright</strong> ugik.dev@gmail.com | +62 812 7974 8967 © 2020
 				</div>
-			</div>
+			</div> -->
 			<div class="col-lg-4 col-md-4 col-xs-8">
 				<div class="logo-footer"> <img width="auto" height="90px" data-src="<?= base_url() ?>assets/img/fkm_logo.png" class="lazyload" src="<?= base_url() ?>assets/img/logo-unsri.png" />
 					<noscript>
