@@ -9,7 +9,7 @@
 # /uploads/skripsi/*
 # /uploads/skripsi_en/*
 # /uploads/luaran/*
-# /application/config/database.php
+/application/config/database.php
 /application/application.zip
 
 
