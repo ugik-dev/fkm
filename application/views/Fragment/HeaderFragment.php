@@ -24,7 +24,7 @@
     <link href="<?= base_url('assets/') ?>font-awesome/css/fontawesome5.7-all.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/plugins/c3/c3.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/animate.css" rel="stylesheet">
-    <link href="<?= base_url('assets/') ?>css/style.css?v=0.0.1" rel="stylesheet">
+    <link href="<?= base_url('assets/') ?>css/style.css" rel="stylesheet">
     <link href="<?= base_url('assets/') ?>css/custom.css" rel="stylesheet">
     <script src="<?= base_url('assets/') ?>js/jquery-3.1.1.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/plugins/dataTables/datatables.min.js"></script>
@@ -38,7 +38,7 @@
     <script src="<?= base_url('assets/') ?>js/plugins/d3/d3.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/plugins/d3/d3-save-svg.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/plugins/c3/c3.min.js"></script>
-    <script src="<?= base_url('assets/') ?>js/custom.js?v=0.0.2"></script>
+    <script src="<?= base_url('assets/') ?>js/custom.js"></script>
     <script src="<?= base_url('assets/') ?>js/FileUploader.js"></script>
 
     <!-- jQuery UI -->
