@@ -5,8 +5,8 @@
       <ul class="nav metismenu" id="side-menu">
         <?= $this->load->view('Fragment/SidebarHeaderFragment', NULL, TRUE); ?>
         <li id="homepage">
-                <a href="<?= base_url() ?>"><i class="fa fa-home"></i> <span class="nav-label">Home Page</span></a>
-              </li>
+          <a href="<?= base_url() ?>"><i class="fa fa-home"></i> <span class="nav-label">Home Page</span></a>
+        </li>
         <li id="kelola_user">
           <a href="<?= site_url('AdminController/') ?>"><i class="fa fa-newspaper"></i> <span class="nav-label">Kelolah User</span></a>
         </li>

@@ -3,7 +3,7 @@
   <div class="ibox-content">
     <form class="form-inline" id="toolbar_form" onsubmit="return false;">
       <input type="hidden" id="is_not_self" name="is_not_self" value="1">
-      <!-- <a type="button" class="btn btn-success my-1 mr-sm-2" id="new_btn" href="<?php echo base_url() . 'AdminController/new_news_post'; ?>"><i class="fal fa-plus"></i> Tambah Berita Baru</a> -->
+      <a type="button" class="btn btn-success my-1 mr-sm-2" id="new_btn" href="<?php echo base_url() . 'AdminController/new_menu'; ?>"><i class="fal fa-plus"></i> Tambah Berita Baru</a>
     </form>
   </div>
 </div>
@@ -111,7 +111,9 @@
       return $.ajax({
         url: `<?php echo site_url('MenuController/getAll/') ?>`,
         'type': 'GET',
-        data: {},
+        data: {
+          simpel: true
+        },
         success: function(data) {
           swal.close();
           var json = JSON.parse(data);
@@ -126,7 +128,7 @@
       });
     }
 
-   
+
     function renderTabelBerita(data) {
       if (data == null || typeof data != "object") {
         console.log("User::UNKNOWN DATA");
@@ -142,7 +144,7 @@
         <a class="dropdown-item" data-id='${b['id_menu']}' href="<?php echo base_url() . 'MenuController/edit_post?id='; ?>${b['id_menu']}"><i class='fa fa-pencil'></i> Edit User</a>
       `;
         var deleteButton = `
-        <a class="delete dropdown-item" data-id='${b['id_menu']}'><i class='fa fa-trash'></i> Hapus User</a>
+        <a class="delete btn btn-danger my-1 mr-sm-3 active" data-id='${b['id_menu']}'><i class='fa fa-trash'></i> Hapus </a>
       `;
         var button = `
         <div class="btn-group" opd="group">
@@ -154,7 +156,7 @@
           </div>
         </div>
       `;
-        renderData.push([b['berita_judul'], b['slug'], lihatBtn]);
+        renderData.push([b['berita_judul'], b['slug'], lihatBtn + (b['deleteable'] == '1' ? deleteButton : '')]);
       });
       FDataTable.clear().rows.add(renderData).draw('full-hold');
     }
@@ -172,7 +174,7 @@
           return;
         }
         $.ajax({
-          url: "<?= site_url('NewsController/delete') ?>",
+          url: "<?= site_url('MenuController/delete') ?>",
           'type': 'POST',
           data: {
             'id_menu': id

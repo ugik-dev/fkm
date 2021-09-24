@@ -5,10 +5,12 @@
       <input type="text" name="berita_judul" id="berita_judul" class="form-control" placeholder="Judul Berita Indonesia" required /><br />
       <input type="text" name="berita_judul_en" id="berita_judul_en" class="form-control" placeholder="Judul berita Inggris" required /><br />
       <input type="text" name="slug" id="slug" class="form-control" placeholder="seminar-national" required /><br />
+      <input type="text" name="url" id="url" class="form-control" placeholder="https://unsri.ac.id" /><br />
       <div class="row col-md-12">
         <div class="col-md-6">
 
           <select class="form-control mr-sm-2" name="parent" id="parent" required="required">
+            <option value="tentang">Tentang</option>
             <option value="academy">Academik</option>
             <option value="seminar">Seminar</option>
             <option value="services">Layanan</option>
@@ -37,7 +39,8 @@
 
 
 
-      <button class="btn btn-success my-1 mr-sm-2" type="submit" id="save_edit_btn" data-loading-text="Loading..."><strong>Simpan Perubahan</strong></button>
+      <button class="btn btn-success my-1 mr-sm-2" type="submit" id="save_edit_btn" data-loading-text="Loading..."><strong>Simpan</strong></button>
+      <!-- <button class="btn btn-success my-1 mr-sm-2" type="submit" id="add_edit_btn" style="display: none;" data-loading-text="Loading..."><strong>Simpan Perubahan</strong></button> -->
 
     </form>
   </div>
@@ -64,12 +67,7 @@
       filebrowserImageBrowseUrl: '<?php echo base_url('assets/kcfinder/browse.php'); ?>',
       height: '400px'
     });
-    id_menu = <?php if (!empty($id_menu)) {
-                echo 'true';
-              } else {
-                echo 'false';
-              } ?>;
-    console.log(id_menu);
+
     var EditorModal = {
       'self': $('#editor_modal'),
       'form': $('#editor_modal').find('#editor_form'),
@@ -83,7 +81,11 @@
       'tipe': $('#editor_modal').find('#tipe'),
       'ckeditor': $('#editor_modal').find('#ckeditor'),
     }
-    EditorModal.saveEditBtn.hide()
+    <?php if (!empty($id_menu)) {
+    ?>
+      EditorModal.saveEditBtn.hide()
+    <?php
+    } ?>;
 
     var swalSaveConfigure = {
       title: "Konfirmasi simpan",
@@ -118,8 +120,12 @@
 
     EditorModal.form.submit(function(event) {
       event.preventDefault();
-
-      var url = "<?= site_url('MenuController/save_edit_post') ?>";
+      var url = "<?php
+                  if (!empty($id_menu)) {
+                    echo    base_url('MenuController/save_edit_post');
+                  } else {
+                    echo    base_url('MenuController/add_new_menu');
+                  } ?>";
       var button = EditorModal.saveEditBtn;
 
       swal(swalSaveConfigure).then((result) => {
@@ -143,8 +149,8 @@
             var user = json['data']
             // dataUser[user['id_user']] = user;
             swal("Simpan Berhasil", "", "success");
-            // renderUser(dataUser);
-            // UserModal.self.modal('hide');
+            location.href = "<?= base_url() ?>AdminController/page_content";
+
           },
           error: function(e) {}
         });

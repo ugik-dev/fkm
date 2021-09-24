@@ -7,7 +7,7 @@ class AdminController extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model(array('NewsModel','GaleryModel','UserModel'));
+    $this->load->model(array('NewsModel', 'GaleryModel', 'UserModel'));
     $this->load->helper(array('DataStructure', 'Validation'));
   }
 
@@ -26,7 +26,7 @@ class AdminController extends CI_Controller
 
   public function  DetailMahasiswa()
   {
-    $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+    $this->SecurityModel->rolesOnlyGuard(array('admin', 'kemahasiswaan'));
     $this->input->get()['nim'];
     $pageData = array(
       'title' => 'Data Skripsi',
@@ -41,7 +41,7 @@ class AdminController extends CI_Controller
 
   public function  DetailJurnalMahasiswa()
   {
-    $this->SecurityModel->rolesOnlyGuard(array('admin','kemahasiswaan'));
+    $this->SecurityModel->rolesOnlyGuard(array('admin', 'kemahasiswaan'));
     $id = $this->UserModel->getUserByUsername($this->input->get()['nim'])['id_user'];
     // var_dump($id);
     // $this->input->get()['id'];
@@ -110,6 +110,20 @@ class AdminController extends CI_Controller
     $pageData = array(
       'title' => 'Post Postingan Baru',
       'content' => 'admin/NewNewsPost',
+      'breadcrumb' => array(
+        'Home' => base_url(),
+      ),
+    );
+    $this->load->view('Page', $pageData);
+  }
+
+
+  public function new_menu()
+  {
+    $this->SecurityModel->roleOnlyGuard('admin');
+    $pageData = array(
+      'title' => 'Post Menu Baru',
+      'content' => 'admin/EditPage',
       'breadcrumb' => array(
         'Home' => base_url(),
       ),

@@ -101,7 +101,7 @@
     <script src="<?= base_url('assets/') ?>js/custom_me.js"></script>
     <script src="https://use.fontawesome.com/04ff81431e.js"></script>
 
-    <title>FKM UNSRI | <?= $title ?></title>
+    <title>FKM UNSRI<?= $title ? ' | ' . $title : '' ?></title>
 </head>
 
 <body class="home blog wp-custom-logo">

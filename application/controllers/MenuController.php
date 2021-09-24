@@ -15,8 +15,8 @@ class MenuController extends CI_Controller
   function simpan_post()
   {
     // if (!empty($data['berita_imageFilename'])) {
-      $data = $this->input->post();
-      $gambar = FileIO::genericUpload('berita_image', array('png', 'jpeg', 'jpg'), NULL, $data);
+    $data = $this->input->post();
+    $gambar = FileIO::genericUpload('berita_image', array('png', 'jpeg', 'jpg'), NULL, $data);
     $this->MenuModel->simpan_berita($this->input->post(), $gambar);
     echo json_encode(array('asd' => 'asd'));
     return;
@@ -25,8 +25,8 @@ class MenuController extends CI_Controller
   function save_edit_post()
   {
     // if (!empty($data['berita_imageFilename'])) {
-      $data = $this->input->post();
-     $this->MenuModel->save_edit_post($this->input->post());
+    $data = $this->input->post();
+    $this->MenuModel->save_edit_post($this->input->post());
     echo json_encode(array('asd' => 'asd'));
     return;
   }
@@ -81,6 +81,19 @@ class MenuController extends CI_Controller
     }
   }
 
+  function add_new_menu()
+  {
+    try {
+      $data = $this->input->post();
+      $gambar = false;
+      if (!empty($data['berita_imageFilename']))
+        $gambar = FileIO::genericUpload('berita_image', array('png', 'jpeg', 'jpg'), NULL, $data);
+      $this->MenuModel->add($this->input->post(), $gambar);
+      echo json_encode(array("data" => $data));
+    } catch (Exception $e) {
+      ExceptionHandler::handle($e);
+    }
+  }
 
   public function edit_post()
   {
@@ -91,7 +104,7 @@ class MenuController extends CI_Controller
 
       $input = $this->input->get();
       $data = $this->MenuModel->get($input['id']);
-    //   var_dump($data);
+      //   var_dump($data);
       $pageData = array(
         'title' => 'Edit Menu Post',
         'content' => 'admin/EditPage',

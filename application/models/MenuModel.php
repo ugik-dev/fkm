@@ -5,8 +5,8 @@ class MenuModel extends CI_Model
   public function save_edit_post($data)
   {
     $this->db->where('id_menu', $data['id_menu']);
-  
-    $this->db->update('menu', DataStructure::slice($data, ['berita_judul','berita_judul_en',  'berita_isi', 'berita_isi_en'], TRUE));
+
+    $this->db->update('menu', DataStructure::slice($data, ['berita_judul', 'berita_judul_en',  'berita_isi', 'berita_isi_en', 'tipe', 'parent', 'url'], TRUE));
     ExceptionHandler::handleDBError($this->db->error(), "Edit Product gagal", "menu");
 
     // return $data['id_product'];
@@ -19,7 +19,7 @@ class MenuModel extends CI_Model
     // $hsl=$this->db->query("INSERT INTO menu (berita_judul,berita_isi,berita_image) VALUES ('$jdl','$berita','$gambar')");
     // return $hsl;
 
-    $this->db->insert('menu', DataStructure::slice($data, ['berita_judul','berita_judul_en',  'berita_isi', 'berita_isi_en', 'berita_image', 'topik_utama', 'jenis_berita', 'slug']));
+    $this->db->insert('menu', DataStructure::slice($data, ['berita_judul', 'berita_judul_en',  'berita_isi', 'berita_isi_en', 'berita_image', 'topik_utama', 'jenis_berita', 'slug']));
     ExceptionHandler::handleDBError($this->db->error(), "Tambah Berita gagal", "menu");
 
     return $this->db->insert_id();
@@ -105,7 +105,11 @@ class MenuModel extends CI_Model
 
   public function getAll($filter = [])
   {
-    $this->db->select('*');
+    if (!empty($filter['simpels'])) {
+      $this->db->select('berita_judul, berita_judul_en, tipe, url, deleteable, id_menu, parent');
+    } else {
+      $this->db->select('*');
+    }
     $this->db->from("menu as tb");
     // $this->db->join('jenis_berita as jb', 'jb.id_jenis_berita = tb.jenis_berita');
     // $this->db->order_by('berita_id', 'desc');
@@ -116,7 +120,7 @@ class MenuModel extends CI_Model
       $this->db->limit(3);
     };
     // int $page = 0;
-    if (!empty($filter['all_topik_utama'])){
+    if (!empty($filter['all_topik_utama'])) {
       $this->db->where('topik_utama', '2');
       if (!empty($filter['page'])) {
         $page = ($filter['page'] * 5) - 5;
@@ -125,9 +129,6 @@ class MenuModel extends CI_Model
       }
       $this->db->limit(5, $page);
     };
-
-
-
 
     if (!empty($filter['all_berita_lainnya'])) {
       $this->db->where('jenis_berita', '1');
@@ -139,7 +140,7 @@ class MenuModel extends CI_Model
       $this->db->limit(5, $page);
     }
 
-    
+
 
     if (!empty($filter['prestasi'])) {
       $this->db->where('jenis_berita', '4');
@@ -219,10 +220,15 @@ class MenuModel extends CI_Model
     return $row[0];
   }
 
-  public function add($data)
+  function add($data, $gambar)
   {
-    $this->db->insert('product', DataStructure::slice($data, ['id_perusahaan']));
-    ExceptionHandler::handleDBError($this->db->error(), "Tambah Product gagal", "product");
+    // $data['slug'] = str_replace(' ', '-', strtolower($data['berita_judul']));
+    // $data['slug'] = preg_replace('/[^A-Za-z0-9\-]/', '',  $data['slug']);
+    // $hsl=$this->db->query("INSERT INTO tbl_berita (berita_judul,berita_isi,berita_image) VALUES ('$jdl','$berita','$gambar')");
+    // return $hsl;
+
+    $this->db->insert('menu', DataStructure::slice($data, ['berita_tanggal', 'berita_judul', 'berita_judul_en',  'berita_isi', 'berita_isi_en', 'tipe', 'url', 'parent', 'slug']));
+    ExceptionHandler::handleDBError($this->db->error(), "Tambah Berita gagal", "tbl_berita");
 
     return $this->db->insert_id();
   }
@@ -240,9 +246,8 @@ class MenuModel extends CI_Model
 
   public function delete($data)
   {
-    $this->db->where('berita_id', $data['berita_id']);
+    $this->db->where('id_menu', $data['id_menu']);
     $this->db->delete('menu');
-
     ExceptionHandler::handleDBError($this->db->error(), "Hapus News Post", "News");
   }
 }

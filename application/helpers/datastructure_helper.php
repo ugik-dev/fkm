@@ -31,10 +31,10 @@ class DataStructure
       if ($value === NULL) {
         continue;
       }
-      if (strcasecmp($old_value, $value) === 0) {
-        $dupes[$old_key] = $old_value;
-        $dupes[$key]     = $value;
-      }
+      // if (strcasecmp($old_value, $value) === 0) {
+      //   $dupes[$old_key] = $old_value;
+      //   $dupes[$key]     = $value;
+      // }
       $old_value = $value;
       $old_key   = $key;
     }
