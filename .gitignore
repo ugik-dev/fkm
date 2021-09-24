@@ -1,13 +1,4 @@
-# /uploads/app/*
-# /uploads/berita_image/*
-# /uploads/cover/*
-# /uploads/header_dir/*
-# /uploads/jurnal/*
-# /uploads/media_galery/*
-# /uploads/news/*
-# /uploads/photo/*
-# /uploads/skripsi/*
-# /uploads/skripsi_en/*
+MANIFEST
 /uploads/berita_image/*
 /uploads/header_dir/*
 /application/config/database.php
