@@ -636,7 +636,7 @@
                                   </a></div>
                         <div class="headline-text text-center">
                             <h4 class=" headline-title  trim-text serif " title='${news['berita_judul']}'> <a class="headline-link  animated" href="<?= base_url('post/'); ?>${news['slug']}" title="Read ${news['berita_judul']}"> ${news['berita_judul']} </a></h4>
-                            <div class="headline-description trim-text trim-four">${p}... <a href="<?= base_url('post/'); ?>${news['slug']}">Read more</a></div>
+                            <div class="headline-description trim-text trim-four"><a href="<?= base_url('post/'); ?>${news['slug']}">Read more</a></div>
                         </div>
                     </div>`);
 

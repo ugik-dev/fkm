@@ -7,7 +7,7 @@ class PublicController extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model(array('NewsModel', 'PimpinanModel', 'GaleryModel', 'DosenDanTenagaPendidikModel', 'TenagaKependidikanModel', 'MenuModel','MahasiswaAlumniModel'));
+    $this->load->model(array('NewsModel', 'PimpinanModel', 'GaleryModel', 'DosenDanTenagaPendidikModel', 'TenagaKependidikanModel', 'MenuModel', 'MahasiswaAlumniModel'));
     $this->load->helper(array('DataStructure', 'Validation'));
     $this->db->db_debug = TRUE;
   }
@@ -99,7 +99,7 @@ class PublicController extends CI_Controller
       'content' => 'public/NewsPageResearch',
     ]);
   }
-    
+
   public function calendar()
   {
     $this->load->view('PublicPage', [
@@ -150,57 +150,56 @@ class PublicController extends CI_Controller
         // "contentData" => $data
       ]);
     }
-
-  
-
   }
   public function college()
   {
 
-      $this->load->view('PublicPage', [
-        'title' => "Collage",
-        'content' => 'public/college',
-        // "contentData" => $data
-      ]);
-   }
+    $this->load->view('PublicPage', [
+      'title' => "Collage",
+      'content' => 'public/college',
+      // "contentData" => $data
+    ]);
+  }
 
-   public function alumni()
-   {
- 
-       $this->load->view('PublicPage', [
-         'title' => "Alumni",
-         'content' => 'public/alumni',
-         // "contentData" => $data
-       ]);
-    }
+  public function alumni()
+  {
+
+    $this->load->view('PublicPage', [
+      'title' => "Alumni",
+      'content' => 'public/alumni',
+      // "contentData" => $data
+    ]);
+  }
 
 
-    public function searchE(){
+  public function searchE()
+  {
     try {
       $filter['clue'] = $this->input->get()['val'];
-      if(!empty($this->input->get()['page'])){
+      if (!empty($this->input->get()['page'])) {
         $filter['page'] =  $this->input->get()['page'];
       }
       $data = $this->NewsModel->search($filter);
-        echo json_encode(array("data" => $data));
-      } catch (Exception $e) {
-        ExceptionHandler::handle($e);
-      }
+      echo json_encode(array("data" => $data));
+    } catch (Exception $e) {
+      ExceptionHandler::handle($e);
     }
-    
-    public function search(){
-      $filter['clue'] = $this->input->get()['val'];
+  }
 
-      $this->load->view('PublicPage', [
-        'title' => "Search",
-        'content' => 'public/SearchPage',
-        'contentData' => array('clue' => $this->input->get()['val'] )
-      ]);
-      // var_dump($data);
-      // echo $clue;
-    }
-    
-   public function services($slug)
+  public function search()
+  {
+    $filter['clue'] = $this->input->get()['val'];
+
+    $this->load->view('PublicPage', [
+      'title' => "Search",
+      'content' => 'public/SearchPage',
+      'contentData' => array('clue' => $this->input->get()['val'])
+    ]);
+    // var_dump($data);
+    // echo $clue;
+  }
+
+  public function services($slug)
   {
     $slug = str_replace('_', '-', strtolower($slug));
     $data = $this->MenuModel->getSlug($slug);
@@ -212,7 +211,8 @@ class PublicController extends CI_Controller
     ]);
   }
 
-  public function galery(){
+  public function galery()
+  {
     $this->load->view('PublicPage', [
       'title' => 'Galery',
       'content' => 'public/GaleryPage'

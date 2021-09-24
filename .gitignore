@@ -8,7 +8,8 @@
 # /uploads/photo/*
 # /uploads/skripsi/*
 # /uploads/skripsi_en/*
-# /uploads/luaran/*
+/uploads/berita_image/*
+/uploads/header_dir/*
 /application/config/database.php
 /application/application.zip
 

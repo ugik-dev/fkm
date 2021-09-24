@@ -31,16 +31,16 @@
                 </div>
                 <div class="panel-body pt-0">
                     <ul id="sidebar-nav" class="list-group list-sibling">
-                    <li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-705"><a title="History" href="<?= site_url() ?>about/history/">History FKM UNSRI</a></li>
-                          <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a title="Meaning of Symbol" href="<?= site_url() ?>about/logo/">Meaning of Symbol</a></li>
-                          <li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a title="Vision and Mission" href="<?= site_url() ?>about/vision-and-mission/">Vision dan Mission</a></li>
-                          <li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-708"><a title="Faculty Senate" href="<?= site_url() ?>about/senate/">Faculty Senate</a></li>
-                          <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a title="Leadership Structure" href="<?= site_url() ?>about/structure/">Leadership Structure</a></li>
-                          <li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a title="Lecturers and Educators" href="<?= site_url() ?>about/lecturer/">Lecturers and Educators</a></li>
-                          <li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a title="Acderitation" href="<?= site_url() ?>about/accreditation/">Acderitation</a></li>
-                          <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a title="Achievements" href="<?= site_url() ?>about/achievements/">Achievements</a></li>
-                          <li id="menu-item-2687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2687"><a title="Education Personnel" href="<?= site_url() ?>about/education-personnel/">Education Personnel FKM UNSRI</a></li>
-                 
+                        <li id="menu-item-705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-705"><a title="History" href="<?= site_url() ?>about/history/">History FKM UNSRI</a></li>
+                        <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a title="Meaning of Symbol" href="<?= site_url() ?>about/logo/">Meaning of Symbol</a></li>
+                        <li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a title="Vision and Mission" href="<?= site_url() ?>about/vision-and-mission/">Vision dan Mission</a></li>
+                        <li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-708"><a title="Faculty Senate" href="<?= site_url() ?>about/senate/">Faculty Senate</a></li>
+                        <li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a title="Leadership Structure" href="<?= site_url() ?>about/structure/">Leadership Structure</a></li>
+                        <li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a title="Lecturers and Educators" href="<?= site_url() ?>about/lecturer/">Lecturers and Educators</a></li>
+                        <li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a title="Acderitation" href="<?= site_url() ?>about/accreditation/">Acderitation</a></li>
+                        <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a title="Achievements" href="<?= site_url() ?>about/achievements/">Achievements</a></li>
+                        <li id="menu-item-2687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2687"><a title="Education Personnel" href="<?= site_url() ?>about/education-personnel/">Education Personnel FKM UNSRI</a></li>
+
                     </ul>
                 </div>
             </div>

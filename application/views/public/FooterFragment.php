@@ -10,7 +10,8 @@
 			<div class="col-lg-4 col-md-4 col-xs-8">
 				<div class="logo-footer"> <img width="auto" height="90px" data-src="<?= base_url() ?>assets/img/fkm_logo.png" class="lazyload" src="<?= base_url() ?>assets/img/logo-unsri.png" />
 					<noscript>
-						<img src="<?= base_url() ?>assets/img/logo-unsri.png" width="100%" /></noscript></div>
+						<img src="<?= base_url() ?>assets/img/logo-unsri.png" width="100%" /></noscript>
+				</div>
 			</div>
 			<div class="col col-lg-6 col-md-8 col-xs-12">
 				<div class="pull-right">
@@ -141,7 +142,7 @@
 		var htmlString = 'ZpNZGxz7brs';
 		var htmlString = 'wm9KN2GYHmU';
 	</script>
-	<script defer src="https://ub.ac.id/wp-content/cache/autoptimize/js/autoptimize_055e675c6ff2218a683658f9138de432.js"></script>
+	<script defer src="<?= base_url() ?>assets/templates/autoptimize_055e675c6ff2218a683658f9138de432.js"></script>
 	</body>
 
 	</html>

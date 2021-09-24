@@ -4,6 +4,23 @@
     <form opd="form" id="editor_form" onsubmit="return false;" type="multipart" method="POST" autocomplete="off">
       <input type="text" name="berita_judul" id="berita_judul" class="form-control" placeholder="Judul Berita Indonesia" required /><br />
       <input type="text" name="berita_judul_en" id="berita_judul_en" class="form-control" placeholder="Judul berita Inggris" required /><br />
+      <input type="text" name="slug" id="slug" class="form-control" placeholder="seminar-national" required /><br />
+      <div class="row col-md-12">
+        <div class="col-md-6">
+
+          <select class="form-control mr-sm-2" name="parent" id="parent" required="required">
+            <option value="academy">Academik</option>
+            <option value="seminar">Seminar</option>
+            <option value="services">Layanan</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control mr-sm-2" name="tipe" id="tipe" required="required">
+            <option value="0">Kontent</option>
+            <option value="1">Url</option>
+          </select>
+        </div>
+      </div>
 
       <input type="hidden" name="id_menu" class="form-control" placeholder="" id="id_menu" /><br />
       <textarea id="ckeditor" name="berita_isi" class="form-control" required><?php if (!empty($dataContent['berita_isi'])) {
@@ -13,14 +30,14 @@
                                                                               } ?></textarea><br />
 
       <textarea id="ckeditor_en" name="berita_isi_en" class="form-control" required><?php if (!empty($dataContent['berita_isi_en'])) {
-                                                                                echo $dataContent['berita_isi_en'];
-                                                                              } else {
-                                                                                echo '';
-                                                                              } ?></textarea><br />
+                                                                                      echo $dataContent['berita_isi_en'];
+                                                                                    } else {
+                                                                                      echo '';
+                                                                                    } ?></textarea><br />
 
 
-    
-       <button class="btn btn-success my-1 mr-sm-2" type="submit" id="save_edit_btn" data-loading-text="Loading..."><strong>Simpan Perubahan</strong></button>
+
+      <button class="btn btn-success my-1 mr-sm-2" type="submit" id="save_edit_btn" data-loading-text="Loading..."><strong>Simpan Perubahan</strong></button>
 
     </form>
   </div>
@@ -40,7 +57,7 @@
     CKEDITOR.replace('ckeditor', {
       filebrowserImageBrowseUrl: '<?php echo base_url('assets/kcfinder/browse.php'); ?>',
       height: '400px',
-      
+
     });
 
     CKEDITOR.replace('ckeditor_en', {
@@ -48,10 +65,10 @@
       height: '400px'
     });
     id_menu = <?php if (!empty($id_menu)) {
-                  echo 'true';
-                } else {
-                  echo 'false';
-                } ?>;
+                echo 'true';
+              } else {
+                echo 'false';
+              } ?>;
     console.log(id_menu);
     var EditorModal = {
       'self': $('#editor_modal'),
@@ -60,7 +77,10 @@
       'saveEditBtn': $('#editor_modal').find('#save_edit_btn'),
       'berita_judul': $('#editor_modal').find('#berita_judul'),
       'berita_judul_en': $('#editor_modal').find('#berita_judul_en'),
-       'id_menu': $('#editor_modal').find('#id_menu'),
+      'id_menu': $('#editor_modal').find('#id_menu'),
+      'slug': $('#editor_modal').find('#slug'),
+      'parent': $('#editor_modal').find('#parent'),
+      'tipe': $('#editor_modal').find('#tipe'),
       'ckeditor': $('#editor_modal').find('#ckeditor'),
     }
     EditorModal.saveEditBtn.hide()
@@ -74,12 +94,15 @@
       confirmButtonText: "Ya, Simpan!",
     };
 
-    <?php if (!empty($dataContent['berita_isi'])) { ?>
+    <?php if (!empty($dataContent['id_menu'])) { ?>
+      EditorModal.parent.val('<?= $dataContent['parent'] ?>');
+      EditorModal.tipe.val('<?= $dataContent['tipe'] ?>');
+      EditorModal.slug.val('<?= $dataContent['slug'] ?>');
       EditorModal.id_menu.val('<?= $dataContent['id_menu'] ?>');
       EditorModal.berita_judul.val('<?= $dataContent['berita_judul'] ?>')
       EditorModal.berita_judul_en.val('<?= $dataContent['berita_judul_en'] ?>')
       EditorModal.saveEditBtn.show();
-    <?php        }  ?>
+    <?php  }  ?>
 
 
     // }
@@ -95,9 +118,9 @@
 
     EditorModal.form.submit(function(event) {
       event.preventDefault();
-  
+
       var url = "<?= site_url('MenuController/save_edit_post') ?>";
-     var button = EditorModal.saveEditBtn;
+      var button = EditorModal.saveEditBtn;
 
       swal(swalSaveConfigure).then((result) => {
         if (!result.value) {

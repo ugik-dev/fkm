@@ -5,7 +5,8 @@
         <?php if ($_COOKIE['lang_set'] == 'in') { ?>
           <h1 class="entry-title"><a href="" title="<?= $contentData['berita_judul'] ?>"><?= $contentData['berita_judul'] ?></a></h1>
           <div class="breadcrumb"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Fakultas Ilmu Kesehatan - Universitas Sriwijaya." href="<?= base_url() ?>" class="home"><span property="name">Fakultas Ilmu Kesehatan</span></a>
-              <meta property="position" content="1"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?= base_url() . 'post/' . $contentData['slug'] ?>" href="<?= base_url() . 'post/' . $contentData['slug'] ?>" class="post post-page"><span property="name"> <?= $contentData['nama_jenis_berita'] ?> </span></a>
+              <meta property="position" content="1">
+            </span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?= base_url() . 'post/' . $contentData['slug'] ?>" href="<?= base_url() . 'post/' . $contentData['slug'] ?>" class="post post-page"><span property="name"> <?= $contentData['nama_jenis_berita'] ?> </span></a>
               <?php if ($contentData['topik_utama'] == '2') {
                 echo '  <meta property="position" content="1"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="' . base_url() . 'post/' . $contentData['slug'] . '" href="' . base_url() . 'hot_news" class="post post-page"><span property="name"> Topik Utama </span></a>';
               } ?>
@@ -13,7 +14,8 @@
             <?php } else { ?>
               <h1 class="entry-title"><a href="" title="<?= $contentData['berita_judul_en'] ?>"><?= $contentData['berita_judul_en'] ?></a></h1>
               <div class="breadcrumb"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Public Healty Faculty - Sriwijaya University." href="<?= base_url() ?>" class="home"><span property="name">Public Healty Faculty</span></a>
-                  <meta property="position" content="1"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?= base_url() . 'post/' . $contentData['slug'] ?>" href="<?= base_url() . 'post/' . $contentData['slug'] ?>" class="post post-page"><span property="name"> <?= $contentData['nama_jenis_berita_en'] ?> </span></a>
+                  <meta property="position" content="1">
+                </span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="<?= base_url() . 'post/' . $contentData['slug'] ?>" href="<?= base_url() . 'post/' . $contentData['slug'] ?>" class="post post-page"><span property="name"> <?= $contentData['nama_jenis_berita_en'] ?> </span></a>
                   <?php if ($contentData['topik_utama'] == '2') {
                     echo '  <meta property="position" content="1"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="' . base_url() . 'post/' . $contentData['slug'] . '" href="' . base_url() . 'hot_news" class="post post-page"><span property="name"> Main Topic </span></a>';
                   } ?>
@@ -31,20 +33,19 @@
               <h1 class="entry-title  hidden-lg hidden-md"><a href="" title="<?= $contentData['berita_judul'] ?>"><?= $contentData['berita_judul'] ?></a></h1>
               <div class="entry-content">
                 <img alt="" src="<?= base_url('uploads/berita_image/') . $contentData['berita_image'] ?>" style="height:auto; width:100% ; padding: 20px 20px 20px 20px">
-      
+
                 <?= date('d F Y, H:i', strtotime($contentData['berita_tanggal'])) ?><br>
-                
+
                 <?= $contentData['berita_isi'] ?>
               <?php } else { ?>
                 <h1 class="entry-title  hidden-lg hidden-md"><a href="" title="<?= $contentData['berita_judul_en'] ?>"><?= $contentData['berita_judul_en'] ?></a></h1>
                 <div class="entry-content">
-                  <img alt="" src="<?= base_url('uploads/berita_image/') . $contentData['berita_image'] ?>" style="height:auto; width:100%; padding: 20px 20px 20px 20px" >
+                  <img alt="" src="<?= base_url('uploads/berita_image/') . $contentData['berita_image'] ?>" style="height:auto; width:100%; padding: 20px 20px 20px 20px">
                   <?= date('d F Y, H:i', strtotime($contentData['berita_tanggal'])) ?><br>
                   <?= $contentData['berita_isi_en'] ?>
 
                 <?php }; ?>
                 <p>&nbsp;</p>
-                <!-- <p><strong>Kontak</strong><br /> Biro Akademik dan Kerjasama (BAK)<br /> Gd. Rektorat Lt.2 Universitas Brawijaya<br /> Jalan Veteran Malang 65145<br /> Telepon : 0341-551611 dan 575777 ext. 117 dan 118 atau Langsung 0341-575754<br /> Fax : 0341-565420 dan 575813<br /> Email : baak[at]ub.ac.id<br /> Website : <a href="http://bak.ub.ac.id/">http://bak.ub.ac.id</a></p> -->
                 <div style="clear: both"></div>
                 </div>
               </div>
